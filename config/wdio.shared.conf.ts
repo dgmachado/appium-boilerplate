@@ -10,6 +10,7 @@ export const config: WebdriverIO.Config = {
     // ====================
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
+    path: '/wd/hub',
     runner: "local",
     //
     // ==================

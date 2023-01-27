@@ -4,7 +4,8 @@ import config from "./wdio.shared.local.appium.conf";
 // ============
 // Specs
 // ============
-config.specs = ["./tests/specs/**/app*.spec.ts"];
+
+config.specs = ["./tests/specs/**/app.movie-detail.spec.ts", "./tests/specs/**/app.home.spec.ts"];
 
 // ============
 // Capabilities
@@ -19,15 +20,15 @@ config.capabilities = [
         // For W3C the appium capabilities need to have an extension prefix
         // This is `appium:` for all Appium Capabilities which can be found here
         // http://appium.io/docs/en/writing-running-appium/caps/
-        "appium:deviceName": "iPhone 13",
-        "appium:platformVersion": "15.4",
+        "appium:deviceName": "iPhone 14 Pro",
+        "appium:platformVersion": "16.2",
         "appium:orientation": "PORTRAIT",
         "appium:automationName": "XCUITest",
         // The path to the app
         "appium:app": join(
             process.cwd(),
-            "./apps/iOS-Simulator-NativeDemoApp-0.4.0.app.zip"
-        ),
+            "./apps/nativescriptmoviesdemomaster.zip"
+        ),   
         "appium:newCommandTimeout": 240,
     },
 ];
